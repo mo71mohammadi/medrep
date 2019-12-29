@@ -369,5 +369,5 @@ def repeat():
 select = Company[0:]
 for com in select:
     Company.remove(com)
-with ThreadPoolExecutor(max_workers=50) as pool:
+with ThreadPoolExecutor(max_workers=5000) as pool:
     pool.map(get_company, select)
