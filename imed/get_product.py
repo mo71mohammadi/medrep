@@ -74,7 +74,7 @@ def get_company(company):
                         response.text)
     print("models: ................................. ", len(list_0))
     endPoint = 0
-    if len(list_0) <= 500:
+    if len(list_0) <= 2000000:
         model_list = []
 
         def get_product(item):
@@ -366,7 +366,7 @@ def repeat():
     get_company(selects[0])
 
 
-select = Company[0:10]
+select = Company[0:100]
 for com in select:
     Company.remove(com)
 with ThreadPoolExecutor(max_workers=50) as pool:
